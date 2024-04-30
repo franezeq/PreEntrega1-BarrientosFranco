@@ -1,0 +1,17 @@
+.botones{
+    font: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-size: 15px;
+    background-color: pink;
+    color: none;
+    border: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+
+}
+.TextoBoton:hover{
+    font: bolder;
+    transform: scale(1.1);
+
+}

@@ -1,0 +1,15 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: pink;
+
+    padding: 10px auto 10px auto;
+    border: 2px solid transparent;
+}
+
+.Logo {
+    padding: 10px 0;
+    width: 60px;
+    height: auto;
+}
