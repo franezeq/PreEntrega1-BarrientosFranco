@@ -1,7 +1,10 @@
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import NavBar from './components/NavBar'
+import NavBarComponent from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
+import AboutComponent from './components/AboutView/AboutComponent'
+import ContactComponent from './components/ContactView/ContactComponent'
 
 
 function App() {
@@ -9,8 +12,17 @@ function App() {
 
   return (
     <>
-    <NavBar/>
-    <ItemListContainer/>
+      <BrowserRouter>
+        <NavBarComponent />
+        <Routes>
+          <Route exact path='/' element={<ItemListContainer />} />
+          <Route exact path='/category/:id' element={<ItemListContainer />} />
+
+          <Route exact path='/about' element={<AboutComponent />} />
+          <Route exact path="/contact" element={<ContactComponent />} />
+        </Routes>
+      </BrowserRouter>
+
     </>
   )
 }

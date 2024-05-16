@@ -1,11 +1,17 @@
 .nav {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-around;
     background-color: pink;
 
     padding: 10px auto 10px auto;
     border: 2px solid transparent;
+}
+.nav li{
+    text-decoration: none;
+    list-style: none;
+    text-transform: uppercase;
 }
 
 .Logo {
