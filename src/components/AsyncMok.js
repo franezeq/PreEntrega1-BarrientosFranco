@@ -1,7 +1,7 @@
 const products = [
     {
         id: 1,
-        img: "../img/MateRojo.jpg",
+        img: "../../src/assets/MateRojo.jpg",
         titulo: "Mate Rojo",
         descripcion: "Mate color rojo con bombilla saca yerba.",
         precio: "2040",
@@ -10,7 +10,7 @@ const products = [
     },
     {
         id: 2,
-        img: "../img/Billetera1.jpg",
+        img: "../../src/assets/billetera1.jpg",
         titulo: "Billetera Marron",
         descripcion: "Billetera marron de cuero.",
         precio: "4000",
@@ -19,7 +19,7 @@ const products = [
     },
     {
         id: 3,
-        img: "../img/Billetera2.jpg",
+        img: "../../src/assets/billetera2.jpg",
         titulo: "Billetera Negra",
         descripcion: "Billetera de cuero negra.",
         precio: " 3000",
