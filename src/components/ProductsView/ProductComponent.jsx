@@ -8,14 +8,23 @@ export default function ProductComponent() {
         getProducts.then(data => setProducts(data))
 
     }, [])
+
+
     return (
         <>
             <h1>products</h1>
             <article>
                 {products.map((product) =>
-                    (<ProductCard title={product.titulo} price={product.precio} image={product.img} />))
+                (<ProductCard
+                    key={product.id}
+                    titulo={product.titulo}
+                    precio={product.precio}
+                    img={product.img}
+                />
+                ))
                 }
             </article>
         </>
-    )
+    );
 }
+
