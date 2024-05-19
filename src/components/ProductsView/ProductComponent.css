@@ -1,0 +1,6 @@
+.CardsPadre{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 60%;
+    margin: 0 auto;
+    }

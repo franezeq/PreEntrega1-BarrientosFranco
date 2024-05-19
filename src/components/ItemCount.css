@@ -1,0 +1,24 @@
+.TituloContador{
+    font-size: 10px;
+}
+.SeccionContador{
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    margin: auto;
+}
+.BotonContador{
+    padding: 0 4px;
+    margin: 0 3px;
+}
+.TextoContador{
+    margin: 0 5px
+}
+.BtnAgregar{
+    width: 50%;
+    margin: 5px auto;
+    border-radius: 7px;
+    font-size: 17px;
+    font-weight: 550;
+
+}

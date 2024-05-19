@@ -6,7 +6,8 @@ const products = [
         descripcion: "Mate color rojo con bombilla saca yerba.",
         precio: "2040",
         stock: "3",
-        alt: "Mate color rojo con bombilla saca yerba."
+        alt: "Mate color rojo con bombilla saca yerba.",
+        categoria: "Otros"
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ const products = [
         descripcion: "Billetera marron de cuero.",
         precio: "4000",
         stock: "7",
-        alt: "Billetera marron de cuero."
+        alt: "Billetera marron de cuero.",
+        categoria: "Hombre"
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ const products = [
         descripcion: "Billetera de cuero negra.",
         precio: " 3000",
         stock: " 9",
-        alt: "Billetera de cuero negra."
+        alt: "Billetera de cuero negra.",
+        categoria: "Hombre"
     },
 
 ]
@@ -34,4 +37,8 @@ export const getProducts = new Promise((resolve) => {
         resolve(products)
     }, 2000);
 })
+
+export const getProduct = (id)=>{
+    return products.find((prod) => prod.id == id);
+}
 

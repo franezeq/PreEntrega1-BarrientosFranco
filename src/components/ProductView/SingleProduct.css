@@ -1,0 +1,41 @@
+.ProdDetailCard{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 30%;
+    margin: 2% auto;
+    font-size: 20px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    -webkit-box-shadow: 3px 2px 10px -1px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 3px 2px 10px -1px rgba(0, 0, 0, 0.22);
+    box-shadow: 3px 2px 10px -1px rgba(0, 0, 0, 0.22);
+}
+.ProdDetailCard img{
+    width: 200px;
+    margin: auto;
+    object-fit: cover;
+}
+.ProdDetailCard h2{
+    font-size: 35px;
+    text-align: center;
+}
+.ProdDetailCard p{
+    margin: 2px auto;
+    
+}
+.Id{
+    text-align: end;
+    font-size: 12px;
+    width: 30px;
+    margin: auto;
+}
+.SubTitulos{
+    font-weight: 700;
+}
+.TextoContenedor{
+    display: flex;
+    margin: auto;
+}
+.TextoParrafo{
+    padding-left: 5px;
+}
