@@ -11,7 +11,7 @@ export default function ProductCard({ titulo, precio, img, id, idProd }) {
             <p className="CardsItem">Precio $ {precio}</p>
             <p className="CardsItem">{id}</p>
             <button className="CardsItem BtnVerMas">
-                <Link to={`/product/${idProd}`} className="LinkVerMas">Ver mas</Link>
+                <Link to={`/item/${idProd}`} className="LinkVerMas">Ver mas</Link>
             </button>
             <ItemCount/>
         </div>

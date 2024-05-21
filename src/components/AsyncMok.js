@@ -1,4 +1,6 @@
-const products = [
+
+
+export const products = [
     {
         id: 1,
         img: "../../src/assets/MateRojo.jpg",
@@ -7,7 +9,7 @@ const products = [
         precio: "2040",
         stock: "3",
         alt: "Mate color rojo con bombilla saca yerba.",
-        categoria: "Otros"
+        categoria: "Varios"
     },
     {
         id: 2,
@@ -31,6 +33,13 @@ const products = [
     },
 
 ]
+export const categorias=[
+    {id:1, categoria:"hombre"},
+    {id:2, categoria:"mujer"},
+    {id:3, categoria:"varios"},
+    {id:4, categoria:"todos"}
+
+]
 
 export const getProducts = new Promise((resolve) => {
     setTimeout(() => {
@@ -38,7 +47,7 @@ export const getProducts = new Promise((resolve) => {
     }, 2000);
 })
 
-export const getProduct = (id)=>{
+export const getProduct = (id) => {
     return products.find((prod) => prod.id == id);
 }
 

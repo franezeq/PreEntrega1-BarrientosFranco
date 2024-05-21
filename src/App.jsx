@@ -5,7 +5,7 @@ import NavBarComponent from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
 import AboutComponent from './components/AboutView/AboutComponent'
 import ContactComponent from './components/ContactView/ContactComponent'
-import SingleProduct from './components/ProductView/SingleProd'
+import ItemDetailContainer from './components/ProductView/ItemDetailContainer'
 
 
 
@@ -18,8 +18,8 @@ function App() {
         <NavBarComponent />
         <Routes>
           <Route exact path='/' element={<ItemListContainer />} />
-          <Route exact path='/category/:id' element={<ItemListContainer />} />
-          <Route exact path="/product/:prodID" element={<SingleProduct />} />
+          <Route exact path='/category/:categoryId' element={<ItemListContainer />} />
+          <Route exact path="/item/:id" element={<ItemDetailContainer/>} />
           <Route exact path='/about' element={<AboutComponent />} />
           <Route exact path="/contact" element={<ContactComponent />} />
         </Routes>

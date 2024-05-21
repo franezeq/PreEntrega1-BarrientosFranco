@@ -1,14 +1,15 @@
 import { useParams } from "react-router-dom"
 import { getProduct } from "../AsyncMok";
 import { useEffect, useState } from "react";
-import "./SingleProduct.css"
+import "./ItemDetailContainer.css"
 
-export default function SingleProduct() {
+export default function ItemDetailContainer() {
     const [product, setProduct] = useState({});
-    const { prodID } = useParams();
+    const { id } = useParams();
 
     useEffect(() => {
-        setProduct(getProduct(prodID));
+        setProduct(getProduct(id));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 
@@ -29,7 +30,7 @@ export default function SingleProduct() {
             <div className="TextoContenedor">
             <p className="ProdDetail SubTitulos">Precio: </p><p className="TextoParrafo"> ${product.precio}</p>
             </div>
-            <p className="ProdDetail Id">ID:{prodID}</p>
+            <p className="ProdDetail Id">ID:{id}</p>
         </div>
     </>
 }
