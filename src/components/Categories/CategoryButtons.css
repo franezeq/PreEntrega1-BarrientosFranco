@@ -1,3 +1,8 @@
+.TituloCategorias{
+    font-size: 30px;
+    text-align: center;
+    margin: 10px auto;
+}
 .Categorias{
     display: flex;
     flex-direction: row;
@@ -12,4 +17,24 @@
     margin: 2px auto;
     border-radius: 10px;
     padding: 5px;
+}
+.Catlinks{
+   list-style: none;
+   font-weight: 800;
+   text-transform: uppercase;
+   margin: 10px;
+   text-decoration: none;
+   color: black;
+   border: 1px black solid;
+   border-radius: 10px;
+   font-size: 20px;
+
+}
+.Catlinks :link{
+    text-decoration: none;
+    padding: 20px 10px;
+    color: black;
+}
+.Catlinks a{
+    color: black;
 }

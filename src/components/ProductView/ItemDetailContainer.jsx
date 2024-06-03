@@ -1,7 +1,10 @@
+/* eslint-disable react/prop-types */
 import { useParams } from "react-router-dom"
 import { getProduct } from "../AsyncMok";
 import { useEffect, useState } from "react";
 import "./ItemDetailContainer.css"
+import ItemCount from "../ItemCount";
+
 
 export default function ItemDetailContainer() {
     const [product, setProduct] = useState({});
@@ -30,6 +33,7 @@ export default function ItemDetailContainer() {
             <div className="TextoContenedor">
             <p className="ProdDetail SubTitulos">Precio: </p><p className="TextoParrafo"> ${product.precio}</p>
             </div>
+            <ItemCount/>
             <p className="ProdDetail Id">ID:{id}</p>
         </div>
     </>

@@ -33,19 +33,7 @@ export const products = [
     },
 
 ]
-export const categorias=[
-    {id:1, categoria:"hombre"},
-    {id:2, categoria:"mujer"},
-    {id:3, categoria:"varios"},
-    {id:4, categoria:"todos"}
 
-]
-
-export const getProducts = new Promise((resolve) => {
-    setTimeout(() => {
-        resolve(products)
-    }, 2000);
-})
 
 export const getProduct = (id) => {
     return products.find((prod) => prod.id == id);

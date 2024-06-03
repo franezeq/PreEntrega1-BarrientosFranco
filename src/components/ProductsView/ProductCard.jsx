@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom"
 import "./ProductCard.css"
 import ItemCount from "../ItemCount"
-export default function ProductCard({ titulo, precio, img, id, idProd }) {
+export default function ProductCard({ titulo, precio, img, id, idProd,}) {
     return <>
         <div className="Cards">
 
@@ -14,6 +14,7 @@ export default function ProductCard({ titulo, precio, img, id, idProd }) {
                 <Link to={`/item/${idProd}`} className="LinkVerMas">Ver mas</Link>
             </button>
             <ItemCount/>
+
         </div>
 
 

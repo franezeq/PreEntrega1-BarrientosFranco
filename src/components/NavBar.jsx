@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import './NavBar.css';
 import Boton from './Boton'
 import CartWidget from './CartWidget';
+import MostrarCarro from './Carro/MostrarCarro';
 
 
 
@@ -14,7 +15,9 @@ export default function NavBarComponent() {
                 <li><Link to={"/"}><img src="../src/assets/logopng.png" alt="" className='Logo'/></Link></li>
                 <li><Link to={"/contact"}><Boton nombre="Contacto"/></Link></li>
                 <li><Link to={"/cart"}><CartWidget/></Link></li>
+                
             </nav>
+            <MostrarCarro/>
 
         </>
     );
