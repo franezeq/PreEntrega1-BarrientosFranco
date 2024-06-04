@@ -11,6 +11,7 @@ export default function ProductComponent() {
     const [productos, setProductos] = useState([]);
     const { idCategory } = useParams();
     useEffect(() => {
+        setProductos([]);
         if (idCategory == undefined) {
             getProducts(products, 2000)
                 .then(resp => setProductos(resp))

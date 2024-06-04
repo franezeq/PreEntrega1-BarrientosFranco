@@ -2,9 +2,8 @@
 import { useRef } from "react";
 import { useState } from "react";
 import "./ItemCount.css"
-import AddToCart from "./AddToCart";
 
-export default function ItemCount(props) {
+export default function ItemCount() {
 
     const [cont, setCont] = useState(0);
     const clicks = useRef(0);
@@ -28,7 +27,6 @@ export default function ItemCount(props) {
                 <p className="TextoContador">{cont}</p>
                 <button onClick={handleInc} className="BotonContador">+</button>
             </section>
-            <AddToCart id={props.id} key={props.id}/>
 
 
         </>

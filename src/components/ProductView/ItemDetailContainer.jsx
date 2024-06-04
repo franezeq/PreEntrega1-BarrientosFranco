@@ -4,6 +4,7 @@ import { getProduct } from "../AsyncMok";
 import { useEffect, useState } from "react";
 import "./ItemDetailContainer.css"
 import ItemCount from "../ItemCount";
+import AddToCart from "../AddToCart"
 
 
 export default function ItemDetailContainer() {
@@ -34,6 +35,7 @@ export default function ItemDetailContainer() {
             <p className="ProdDetail SubTitulos">Precio: </p><p className="TextoParrafo"> ${product.precio}</p>
             </div>
             <ItemCount/>
+            <AddToCart key={product.id} id={product.id}/>
             <p className="ProdDetail Id">ID:{id}</p>
         </div>
     </>

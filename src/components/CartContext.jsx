@@ -13,6 +13,7 @@ const CartContext = ({ children }) => {
         for (let product of listCart) {
             if (product.id === id) {
                 let cantidad = product.cantidad;
+
                 if (cantidad < agregarProducto.stock) {
                     const nuevaCantidad = { ...product, cantidad: cantidad + 1 }
                     setListCart([...carro, nuevaCantidad])
@@ -26,7 +27,7 @@ const CartContext = ({ children }) => {
     const Clear = () => {
         setListCart([])
     }
-    const remove = id => {
+    const remove = (id) => {
         const actualizarCarro = listCart.filter(product => product.id !== id);
         setListCart(actualizarCarro);
     }

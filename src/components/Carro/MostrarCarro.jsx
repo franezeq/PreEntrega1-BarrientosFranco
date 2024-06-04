@@ -17,6 +17,7 @@ const MostrarCarro = () => {
                 : listCart.map(product =>(
                     <ItemCarrito
                     key={product.id}
+                    id={product.id}
                     titulo={product.titulo}
                     imagen={product.img}
                     cantidad={product.cantidad}

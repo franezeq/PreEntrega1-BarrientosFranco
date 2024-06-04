@@ -1,0 +1,25 @@
+.imgcarrito{
+    width: 50px;
+    height: auto;
+    object-fit: cover;
+}
+.itemCarrito{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.itemCarritoDiv{
+    margin: 10px;
+    align-content: center;
+}
+.Eliminar{
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    width: 10%;
+    height: auto;
+    align-content: center;
+    margin: auto;
+    padding: 5px;
+   
+}
