@@ -2,9 +2,10 @@
 import { Link } from "react-router-dom"
 import "./ProductCard.css"
 import ItemCount from "../ItemCount"
+
 export default function ProductCard({ titulo, precio, img, id, idProd,}) {
     return <>
-        <div className="Cards">
+        <div className="Cards" key={id}>
 
             <h4 className="CardsItem">{titulo}</h4>
             <img className="CardsItem" src={img} alt={`imagen de ${titulo}`} />

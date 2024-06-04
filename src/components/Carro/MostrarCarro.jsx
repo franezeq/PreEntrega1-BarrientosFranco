@@ -3,7 +3,7 @@ import ItemCarrito from "./ItemCarrito";
 import "./MostrarCarro.css"
 import { ListCartContext } from "../CartContext";
 const MostrarCarro = () => {
-    const {listCart} = useContext(ListCartContext)
+    const {listCart, Clear} = useContext(ListCartContext)
     return (
         <div className="Carro">
             <div className="Cerrar">
@@ -29,7 +29,7 @@ const MostrarCarro = () => {
             </div>
             <div className="Finalizar">
                 <button className="FinalizarBoton">Finalizar</button>
-                <button className="Clear">Limpiar</button>
+                <button className="Clear" onClick={Clear}>Limpiar</button>
             </div>
         </div>
     )

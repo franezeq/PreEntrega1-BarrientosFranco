@@ -16,7 +16,7 @@ export default function ProductComponent() {
                 .then(resp => setProductos(resp))
                 .catch(error => console.log(error))
         } else {
-            getProducts(products.filter(product => product.categoria == idCategory), 2000)
+            getProducts(products.filter(filter=> filter.categoria == idCategory), 2000)
                 .then(resp => setProductos(resp))
                 .catch(error => console.log(error))
         }
@@ -30,8 +30,8 @@ export default function ProductComponent() {
         <>
             <h2>Productos</h2>
             <article className="CardsPadre">
-                {productos.map((product) =>
-                (<ProductCard
+                {productos.map(product =>(
+                <ProductCard
                     key={product.id}
                     titulo={product.titulo}
                     precio={product.precio}

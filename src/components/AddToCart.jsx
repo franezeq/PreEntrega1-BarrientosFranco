@@ -5,7 +5,7 @@ import { ListCartContext } from "./CartContext"
 const AddToCart = ({id}) => {
     let {agregar} = useContext(ListCartContext)
     return(
-        <button id="add" onClick={()=> agregar(id) }>
+        <button id="add" onClick={()=> agregar(id)}>
             <p>Agregar</p>
         </button>
     )

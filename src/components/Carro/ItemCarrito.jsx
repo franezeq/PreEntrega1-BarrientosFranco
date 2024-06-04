@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import { ListCartContext } from "../CartContext";
+
 // eslint-disable-next-line react/prop-types
-const ItemCarrito = ({titulo, precio,cantidad, img, alt}) => {
+const ItemCarrito = ({id,titulo, precio,cantidad, img, alt}) => {
+    const {remove}= useContext(ListCartContext)
     return (
-        <div className="itemCarrito">
+        <div className="itemCarrito" key={id}>
             <div>
                 <img src={img} alt={alt} />
             </div>
@@ -14,7 +18,7 @@ const ItemCarrito = ({titulo, precio,cantidad, img, alt}) => {
                 <span className="SubTotal">Subtotal: </span>
                 <span>${cantidad * precio}</span>
             </div>
-            <button className="Eliminar">
+            <button className="Eliminar" onClick={()=> remove(id)}>
                 X
             </button>
         </div>
