@@ -1,40 +1,52 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react"
-import { products } from "./AsyncMok"
+import { createContext, useState } from "react";
+import { getProds } from "../firebase/firebase";
 
-export const ListCartContext = createContext(null)
+export const ListCartContext = createContext(null);
+
 const CartContext = ({ children }) => {
-    const [listCart, setListCart] = useState([])
-    const agregar = (id) => {
-        const agregarProducto = products.find(product => product.id === id);
-        const carro = listCart.filter(product => product.id !== id)
+    const [listCart, setListCart] = useState([]);
 
-        let add = true;
-        for (let product of listCart) {
-            if (product.id === id) {
-                let cantidad = product.cantidad;
+    const agregar = async (id, quantity) => {
+        try {
+            const productList = await getProds();
+            const productToAdd = productList.find((product) => product.id === id);
 
-                if (cantidad < agregarProducto.stock) {
-                    const nuevaCantidad = { ...product, cantidad: cantidad + 1 }
-                    setListCart([...carro, nuevaCantidad])
+            if (productToAdd) {
+                const existingProductIndex = listCart.findIndex((product) => product.id === id);
+
+                if (existingProductIndex !== -1) {
+                    // Actualizar cantidad si el producto ya está en el carrito
+                    setListCart((prevCart) => {
+                        const updatedCart = [...prevCart];
+                        updatedCart[existingProductIndex].cantidad += quantity;
+                        return updatedCart;
+                    });
+                } else {
+                    // Agregar producto al carrito por primera vez
+                    setListCart((prevCart) => [...prevCart, { id, ...productToAdd, cantidad: quantity }]);
                 }
-                add = false;
-                break;
+            } else {
+                console.log("El producto no existe en la base de datos");
             }
+        } catch (error) {
+            console.error("Error al agregar producto al carrito:", error);
         }
-        add && setListCart([...carro, {...agregarProducto, cantidad: 1 }])
-    }
+    };
+
     const Clear = () => {
-        setListCart([])
-    }
+        setListCart([]);
+    };
+
     const remove = (id) => {
-        const actualizarCarro = listCart.filter(product => product.id !== id);
-        setListCart(actualizarCarro);
-    }
+        setListCart((prevCart) => prevCart.filter((product) => product.id !== id));
+    };
+
     return (
-        <ListCartContext.Provider value={{remove, listCart, agregar, Clear}}>
+        <ListCartContext.Provider value={{ remove, listCart, agregar, Clear }}>
             {children}
         </ListCartContext.Provider>
-    )
-}
+    );
+};
+
 export default CartContext;

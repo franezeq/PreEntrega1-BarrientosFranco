@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./CategoryButtons.css";
 
-const CategoryButtons = (Cat) => {
+const CategoryButtons = () => {
     return (
         <>
             <h3 className="TituloCategorias">Categorías</h3>
@@ -9,16 +9,16 @@ const CategoryButtons = (Cat) => {
                 <ul className="Categorias">
                     <li className="Catlinks">
                         <Link to="/category/Hombre" key="Hombre">
-                            {Cat.uno}
+                        Hombre
                         </Link>
                     </li>
                     <li className="Catlinks">
                         <Link to="/category/Mujer" key="Mujer">
-                            {Cat.dos}
+                            Mujer
                         </Link>
                     </li>
                     <li className="Catlinks"> <Link to="/category/Varios" key="Varios">
-                        {Cat.tres}
+                        Varios
                         </Link></li>
                 </ul>
             </section>
