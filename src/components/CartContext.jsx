@@ -19,12 +19,21 @@ const CartContext = ({ children }) => {
                     // Actualizar cantidad si el producto ya está en el carrito
                     setListCart((prevCart) => {
                         const updatedCart = [...prevCart];
-                        updatedCart[existingProductIndex].cantidad += quantity;
+                        const newQuantity = updatedCart[existingProductIndex].cantidad + quantity;
+                        if (newQuantity <= productToAdd.stock) {
+                            updatedCart[existingProductIndex].cantidad = newQuantity;
+                        } else {
+                            alert(`Solo puedes agregar hasta ${productToAdd.stock} unidades de este producto.`);
+                        }
                         return updatedCart;
                     });
                 } else {
                     // Agregar producto al carrito por primera vez
-                    setListCart((prevCart) => [...prevCart, { id, ...productToAdd, cantidad: quantity }]);
+                    if (quantity <= productToAdd.stock) {
+                        setListCart((prevCart) => [...prevCart, { id, ...productToAdd, cantidad: quantity }]);
+                    } else {
+                        alert(`Solo puedes agregar hasta ${productToAdd.stock} unidades de este producto.`);
+                    }
                 }
             } else {
                 console.log("El producto no existe en la base de datos");

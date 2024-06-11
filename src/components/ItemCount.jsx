@@ -1,24 +1,25 @@
 /* eslint-disable react/prop-types */
-import { useRef } from "react";
 import { useState } from "react";
-import "./ItemCount.css"
+import "./ItemCount.css";
 
-export default function ItemCount() {
-
+export default function ItemCount({ onAdd, stock }) {
     const [cont, setCont] = useState(0);
-    const clicks = useRef(0);
-
 
     const handleInc = () => {
-        setCont(cont + 1);
-        clicks.current++;
-
+        if (cont < stock) {
+            setCont(cont + 1);
+        }
     };
 
     const handleDec = () => {
-        setCont(cont - 1);
-        clicks.current++;
-    }
+        if (cont > 0) {
+            setCont(cont - 1);
+        }
+    };
+
+    const handleAdd = () => {
+        onAdd(cont);
+    };
 
     return (
         <>
@@ -27,8 +28,8 @@ export default function ItemCount() {
                 <p className="TextoContador">{cont}</p>
                 <button onClick={handleInc} className="BotonContador">+</button>
             </section>
-
-
+            <button onClick={handleAdd} className="BotonAgregar">Agregar</button>
+            <p className="StockDisponible">Stock disponible: {stock}</p>
         </>
-    )
+    );
 }

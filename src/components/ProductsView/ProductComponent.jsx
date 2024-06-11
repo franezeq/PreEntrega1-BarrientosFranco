@@ -33,6 +33,7 @@ export default function ProductComponent() {
                         img={product.img}
                         idProd={product.id}
                         categoria={product.categoria}
+                        stock={product.stock} 
                     />
                 ))}
             </article>

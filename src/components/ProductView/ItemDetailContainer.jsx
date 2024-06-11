@@ -42,7 +42,7 @@ export default function ItemDetailContainer() {
         <p className="ProdDetail SubTitulos">Precio: </p>
         <p className="TextoParrafo"> ${product.precio}</p>
       </div>
-      <AddToCart key={product.id} id={product.id} />
+      <AddToCart key={product.id} id={product.id} stock={product.stock} /> 
       <p className="ProdDetail Id">ID:{id}</p>
     </div>
   );
