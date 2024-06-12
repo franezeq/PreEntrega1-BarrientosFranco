@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import "./ProductCard.css";
 import AddToCart from "../AddToCart";
+import "./ProductCard.css"
 
 export default function ProductCard({ stock, titulo, precio, img, idProd, categoria }) {
     return (

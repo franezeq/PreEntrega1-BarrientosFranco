@@ -28,7 +28,9 @@ export default function ItemCount({ onAdd, stock }) {
                 <p className="TextoContador">{cont}</p>
                 <button onClick={handleInc} className="BotonContador">+</button>
             </section>
-            <button onClick={handleAdd} className="BotonAgregar">Agregar</button>
+            <div className="BotonAgregarContainer">
+                <button onClick={handleAdd} className="BotonAgregar">Agregar</button>
+            </div>
             <p className="StockDisponible">Stock disponible: {stock}</p>
         </>
     );

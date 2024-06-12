@@ -1,6 +1,6 @@
-export default function ContactComponent(){
-    return(<>
-    ContactComponent
+export default function ContactComponent() {
+    return (<>
+        ContactComponent
     </>
-)
+    )
 }

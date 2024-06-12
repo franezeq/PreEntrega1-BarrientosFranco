@@ -1,26 +1,27 @@
 /* eslint-disable react/prop-types */
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ListCartContext } from "./CartContext";
-import ItemCount from "./ItemCount";
+import "./AddToCart.css"
 
-const AddToCart = ({ id, stock }) => {
+export default function AddToCart({ id, stock }) {
     const { agregar } = useContext(ListCartContext);
+    const [quantity, setQuantity] = useState(1);
 
-    const handleAddToCart = (quantity) => {
-        if (quantity > 0 && quantity <= stock) {
-            agregar(id, quantity);
-        } else if (quantity > stock) {
-            alert(`No puede agregar más de ${stock} productos`);
-        } else {
-            alert("Debe seleccionar al menos 1 producto");
-        }
+    const handleAddToCart = () => {
+        agregar(id, quantity);
     };
 
     return (
-        <div>
-            <ItemCount onAdd={handleAddToCart} stock={stock} />
+        <div className="AddToCart">
+            <input
+                type="number"
+                value={quantity}
+                onChange={(e) => setQuantity(parseInt(e.target.value))}
+                min="1"
+                max={stock}
+                className="QuantityInput"
+            />
+            <button onClick={handleAddToCart} className="AddButton">Agregar</button>
         </div>
     );
-};
-
-export default AddToCart;
+}

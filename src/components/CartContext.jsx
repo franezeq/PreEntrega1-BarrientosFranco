@@ -13,24 +13,28 @@ const CartContext = ({ children }) => {
             const productToAdd = productList.find((product) => product.id === id);
 
             if (productToAdd) {
-                const existingProductIndex = listCart.findIndex((product) => product.id === id);
+                const existingProduct = listCart.find((product) => product.id === id);
 
-                if (existingProductIndex !== -1) {
-                    // Actualizar cantidad si el producto ya está en el carrito
+                if (existingProduct) {
+
                     setListCart((prevCart) => {
-                        const updatedCart = [...prevCart];
-                        const newQuantity = updatedCart[existingProductIndex].cantidad + quantity;
-                        if (newQuantity <= productToAdd.stock) {
-                            updatedCart[existingProductIndex].cantidad = newQuantity;
-                        } else {
-                            alert(`Solo puedes agregar hasta ${productToAdd.stock} unidades de este producto.`);
-                        }
-                        return updatedCart;
+                        return prevCart.map((product) => {
+                            if (product.id === id) {
+                                const newQuantity = product.cantidad + quantity;
+                                if (newQuantity <= productToAdd.stock) {
+                                    return { ...product, cantidad: newQuantity };
+                                } else {
+                                    alert(`Solo puedes agregar hasta ${productToAdd.stock} unidades de este producto.`);
+                                    return product;
+                                }
+                            }
+                            return product;
+                        });
                     });
                 } else {
-                    // Agregar producto al carrito por primera vez
+
                     if (quantity <= productToAdd.stock) {
-                        setListCart((prevCart) => [...prevCart, { id, ...productToAdd, cantidad: quantity }]);
+                        setListCart((prevCart) => [...prevCart, { ...productToAdd, id, cantidad: quantity }]);
                     } else {
                         alert(`Solo puedes agregar hasta ${productToAdd.stock} unidades de este producto.`);
                     }

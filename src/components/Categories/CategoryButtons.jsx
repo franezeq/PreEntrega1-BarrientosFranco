@@ -9,7 +9,7 @@ const CategoryButtons = () => {
                 <ul className="Categorias">
                     <li className="Catlinks">
                         <Link to="/category/Hombre" key="Hombre">
-                        Hombre
+                            Hombre
                         </Link>
                     </li>
                     <li className="Catlinks">
@@ -19,7 +19,7 @@ const CategoryButtons = () => {
                     </li>
                     <li className="Catlinks"> <Link to="/category/Varios" key="Varios">
                         Varios
-                        </Link></li>
+                    </Link></li>
                 </ul>
             </section>
         </>

@@ -1,6 +1,6 @@
-export default function AboutComponent(){
-    return(<>
-    AboutComponentt
+export default function AboutComponent() {
+    return (<>
+        AboutComponentt
     </>
-)
+    )
 }

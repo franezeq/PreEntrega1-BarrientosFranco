@@ -1,16 +1,18 @@
-.TituloCategorias{
+.TituloCategorias {
     font-size: 30px;
     text-align: center;
     margin: 10px auto;
 }
-.Categorias{
+
+.Categorias {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 40%;
     margin: 5px auto;
 }
-.Categorias button{
+
+.Categorias button {
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 600;
@@ -18,23 +20,26 @@
     border-radius: 10px;
     padding: 5px;
 }
-.Catlinks{
-   list-style: none;
-   font-weight: 800;
-   text-transform: uppercase;
-   margin: 10px;
-   text-decoration: none;
-   color: black;
-   border: 1px black solid;
-   border-radius: 10px;
-   font-size: 20px;
+
+.Catlinks {
+    list-style: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    border: 1px black solid;
+    border-radius: 10px;
+    font-size: 20px;
 
 }
-.Catlinks :link{
+
+.Catlinks :link {
     text-decoration: none;
     padding: 20px 10px;
     color: black;
 }
-.Catlinks a{
+
+.Catlinks a {
     color: black;
 }

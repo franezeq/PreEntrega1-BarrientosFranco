@@ -1,17 +1,19 @@
-.carroConContador{
-display: flex;
-flex-direction: row;
+.carroConContador {
+    display: flex;
+    flex-direction: row;
 }
-.ImgCarrito{
+
+.ImgCarrito {
     height: 30px;
     width: auto;
     border: white 1px;
     align-self: center;
     justify-self: center;
     cursor: pointer;
-    
+
 
 }
-.ImgCarrito:hover{
+
+.ImgCarrito:hover {
     transform: scale(1.1);
 }

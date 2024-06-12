@@ -22,6 +22,7 @@ export default function NavBarComponent() {
                 <MostrarCarro />
             </ContextCarro>
 
+
         </>
     );
 }

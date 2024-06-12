@@ -8,7 +8,8 @@
     padding: 10px auto 10px auto;
     border: 2px solid transparent;
 }
-.nav li{
+
+.nav li {
     text-decoration: none;
     list-style: none;
     text-transform: uppercase;

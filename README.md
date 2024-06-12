@@ -1,8 +1,15 @@
-# React + Vite
+# Ecommerce - Meraki
+##### Franco Barrientos
+Mi Web App es un Ecommerce de productos varios de regaleria.
+En la pantalla principal se podran ver los productos disponibles y se podra clickear en "Ver mas" de cada uno de ellos para acceder a los detalles de los mismos.
+Una vez agregado el producto al carro, seleccionando la cantidad deseada con el contador podran hacer click en Finalizar para acceder al formulario de orden. Solo se podra agregar al carro una cantidad mayor a 0 y menor o igual al stock disponible en nuestra base de datos. Podran agregar productos al carro desde la pantalla principal o desde los detalles del producto.
+En el carro podran ver los productos con su imagen y precio, con subtotales en caso de seleccionar mas de un producto. Tambien debajo aparecera el valor total final.
+ Una vez que completen sus datos, podran generar una orden con un Id que le brindara la App a continuacion.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ ## Dependencias:
+  "firebase", "react", "react-dom", "react-router-dom", "react-spinners"
+  ##### Firebase
+  Se implemento como fue sugerido para la entrega para el uso de una base de datos. Tanto para los productos como para la generacion de ordenes.
+  ##### React-spinners
+  Esta dependencia se implemento por estetica, para que cuando cargen los productos se muestre una animacion de carga.
+  

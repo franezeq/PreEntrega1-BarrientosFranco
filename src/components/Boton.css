@@ -1,4 +1,4 @@
-.botones{
+.botones {
     font: 500;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-transform: uppercase;
@@ -10,7 +10,8 @@
     border: 2px solid transparent;
 
 }
-.TextoBoton:hover{
+
+.TextoBoton:hover {
     font: bolder;
     transform: scale(1.1);
 
